@@ -50,7 +50,7 @@ class plugin_userlink extends plugin_base {
     public function execute($data, $row, $user, $courseid, $starttime = 0, $endtime = 0) {
 
         $url = new moodle_url("/user/editadvanced.php", ["id" => $row->id]);
-        $a = html_writer::link($url, 'view');
+        $a = html_writer::link($url, get_string('view'),['target'=>'blank']);
         return $a;
 
     }
